@@ -1,0 +1,210 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper{
+  width: 1170px;
+  margin:auto;
+}
+
+#header-home{
+  background:url("img/fondo1.JPG");
+  height: 100vh;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-position: center center;
+  position: relative;
+}
+
+.nav-area{
+  float:right;
+  list-style: none;
+  margin-top: 30px;
+}
+
+.nav-area li{
+  display: inline-block;
+}
+
+.nav-area li a{
+  color:rgb(38, 35, 54);
+  text-decoration: none;
+  padding: 5px 20px;
+  font-family:poppins;
+  font-size: 16px;
+}
+
+.nav-area li a:hover{
+  background: #fff;
+  color: #333;
+}
+
+.logo img{
+  width: 100px; height: 100px;
+  float: left;
+  height: auto
+}
+
+.nombre-texto{
+  position: absolute;
+  width: 600px;
+  height: 300px;
+  margin: 20% 30%;
+  text-align: center;
+}
+
+.nombre-texto h1 {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 60px;
+}
+.nombre-texto a {
+  border: 1px solid #fff;
+  padding: 10px 25px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-top: 20px;
+  display:inline-block;
+  color: #fff;
+}
+
+.contenedor{
+  width: 100%;
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(4,auto);
+  grid-template-areas: "header header header"
+                       "contenido contenido sidebar"
+                       "widtget1 widtget2 sidebar"
+                       "footer footer footer";
+}
+
+.contenedor > section,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer,{
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.contenedor .header{
+  height: 350px;
+    /* fallback for old browsers */
+  background:url("img/back1.jpg");
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-position: center center;
+  position: relative;
+  grid-area: header;
+  text-align: center;
+}
+
+header h1{
+  font-size: 80px;
+  color:rgb(23, 40, 25) ;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+header nav{
+  bottom:  0;
+  height: 60px;
+  line-height: 60px;
+  width: 100%;
+  background: rgba(215, 247, 242, 0.3);
+}
+header nav a{
+  color:rgb(47, 47, 39);
+  display: inline-block;
+  padding: 10px 15px;
+  line-height: 1;
+  text-decoration: none;
+  border-radius: 5px;
+}
+header nav a:hover{
+  background: rgba(62, 73, 97, 0.74);
+}
+.contenedor .contenido{
+  grid-area: contenido;
+}
+.contenedor .titulo2 h4{
+  text-align:center; }
+
+.contenedor .titulo2{
+  text-align:left;}
+
+.contenedor .sidebar{
+  grid-column: 3 / 4;
+  background: rgba(43, 52, 59, 0.96);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  grid-area: sidebar;
+}
+
+.contenedor .sidebar blockquote, h3{
+  color: rgb(241, 227, 204)
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2 {
+  background: rgba(63, 130, 83, 0.91);
+  color: blue;
+  height: 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor .widget-1{
+  grid-area: widtget1;
+}
+.contenedor .widget-2{
+  grid-area: widtget2;
+}
+
+.contenedor .footer{
+  background: rgba(28, 90, 92, 0.55);
+  color: black;
+  grid-area: footer;
+}
+
+section{
+  margin: 10px;
+  padding:  20px;
+  background: white;
+  border-radius:  4px;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+}
+
+body.sticky-header{
+  padding-top: 100px;
+}
+
+body.sticky-header header{
+  height: 60px;
+  background: rgb(126, 53, 175);
+}
+
+body.sticky-header header h1{
+  transform: scale(0, 0);
+}
+
+
+@media screen and (max-width: 768px){
+  body{
+    background: rgb(221, 211, 230);
+  }
+  .contenedor{
+    grid-template-areas: "header header header"
+                          "sidebar sidebar sidebar"
+                         "contenido contenido contenido"
+                         "widtget1 widtget2 widtget2"
+                        "footer footer footer";}}
